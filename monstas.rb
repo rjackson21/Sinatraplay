@@ -13,9 +13,8 @@ get "/signin" do
     "Signing In"
 end
 
-#this block accepts an argument 
-get "/monstas/:name" do
-    ERB.new("<h1>Hello <%= params[:name] %></h1>").result(binding)
-end
+get '/monstas/:name' do
+    erb "<h1>Hello <%= name %></h1>", { :locals => { :name => params[:name] } }
+  end
 
 
