@@ -14,7 +14,7 @@ get "/signin" do
 end
 
 get '/monstas/:name' do
-    erb "<h1>Hello <%= name %></h1>", { :locals => { :name => params[:name] } }
+    erb "<h1>Hello <%= name %></h1>", { :locals => params }
   end
 
 
