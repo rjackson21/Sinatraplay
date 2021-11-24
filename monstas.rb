@@ -14,7 +14,9 @@ get "/signin" do
 end
 
 get '/monstas/:name' do
-    erb "<h1>Hello <%= name %></h1>", { :locals => params }
-  end
+    template = "<h1>Hello <%= name %></h1>" 
+    layout = "<html><body><%= yield %></body></html>"
+    erb template, { :locals => params, :layout => layout }
+end
 
 
